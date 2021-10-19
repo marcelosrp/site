@@ -1,11 +1,13 @@
 import { GraphQLClient } from 'graphql-request'
 
-const endpoint = process.env.GRAPHQL_HOST || ''
+export function request({ query, variables }) {
+  const endpoint = process.env.NEXT_DATOCMS_URL
 
-const client = new GraphQLClient(endpoint, {
-  headers: {
-    authorization: `Bearer ${process.env.GRAPHQL_TOKEN}`
-  }
-})
+  const client = new GraphQLClient(endpoint, {
+    headers: {
+      authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`
+    }
+  })
 
-export default client
+  return client.request(query, variables)
+}

@@ -3,15 +3,17 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
 
   :root {
-    --highlight: #e20e8d;
-    --background: #030518;
+    --background: #000;
     --white: #eee;
-
     --container: 100rem;
-
     --small: 1.5rem;
     --medium: 3rem;
     --large: 5rem;
+    --font: 'Epilogue', sans-serif;
+    --light: 200;
+    --normal: 300;
+    --bold: 500;
+    --extraBold: 700;
   }
 
   * {
@@ -31,7 +33,8 @@ const GlobalStyles = createGlobalStyle`
   body {
     background-color: var(--background);
     color: var(--white);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--font);
+    font-weight: var(--normal);
   }
 `
 

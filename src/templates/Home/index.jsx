@@ -1,5 +1,6 @@
-import Layout from '@components/Layout'
 import { NextSeo } from 'next-seo'
+import Layout from '@components/Layout'
+import About from '@components/About'
 
 export default function HomeTemplate() {
   return (
@@ -23,7 +24,7 @@ export default function HomeTemplate() {
           site_name: 'NextJS - Boilerplate'
         }}
       />
-      <h1>Home</h1>
+      <About />
     </Layout>
   )
 }

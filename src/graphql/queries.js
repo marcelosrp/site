@@ -1,14 +1,16 @@
-// import { gql } from 'graphql-request'
+import { gql } from 'graphql-request'
 
-/* export const GET_PAGES = gql`
-  query getPages($first: Int) {
-    pages(first: $first) {
+export const GET_PROJECTS = gql`
+  query getProjects($limit: IntType) {
+    allProjects(first: $limit) {
       id
-      heading
-      slug
-      body {
-        html
+      title
+      url
+      datePublish
+      isHighlight
+      thumb {
+        url
       }
     }
   }
-` */
+`
