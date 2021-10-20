@@ -1,8 +1,12 @@
+import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import Layout from '@components/Layout'
 import About from '@components/About'
 
-export default function HomeTemplate() {
+import * as S from './styles'
+
+export default function HomeTemplate({ projects }) {
+  console.log(projects.allProjects)
   return (
     <Layout>
       <NextSeo
@@ -25,6 +29,21 @@ export default function HomeTemplate() {
         }}
       />
       <About />
+
+      <S.WrapperProjects>
+        {projects.allProjects.map((project) => (
+          <S.CardProject key={project.id}>
+            <div className="wrapper-image">
+              <Image
+                src={project.thumb.url}
+                alt={project.title}
+                layout="fill"
+                quality="80"
+              />
+            </div>
+          </S.CardProject>
+        ))}
+      </S.WrapperProjects>
     </Layout>
   )
 }

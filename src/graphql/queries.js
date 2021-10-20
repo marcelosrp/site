@@ -7,7 +7,6 @@ export const GET_PROJECTS = gql`
       title
       url
       datePublish
-      isHighlight
       thumb {
         url
       }
