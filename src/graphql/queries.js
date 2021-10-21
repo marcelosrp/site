@@ -13,3 +13,11 @@ export const GET_PROJECTS = gql`
     }
   }
 `
+
+export const GET_RESUME = gql`
+  query GET_RESUME {
+    about {
+      resume
+    }
+  }
+`

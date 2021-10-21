@@ -4,7 +4,7 @@ import CardProject from '@components/CardProject'
 
 import * as S from './styles'
 
-export default function HomeTemplate({ projects }) {
+export default function HomeTemplate({ projects, about }) {
   return (
     <>
       <NextSeo
@@ -27,7 +27,7 @@ export default function HomeTemplate({ projects }) {
         }}
       />
 
-      <About />
+      <About about={about} />
 
       <S.WrapperProjects>
         {projects.allProjects.map((project) => (

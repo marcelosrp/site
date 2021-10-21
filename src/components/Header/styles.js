@@ -5,12 +5,16 @@ export const Header = styled.header`
   background-color: rgba(6, 1, 1, 0.9);
   backdrop-filter: blur(20px) saturate(200%);
   display: flex;
-  height: 10rem;
+  height: 6rem;
   justify-content: space-between;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 2;
+
+  @media (min-width: 700px) {
+    height: 10rem;
+  }
 `
 
 export const Logo = styled.h1`

@@ -3,10 +3,10 @@ import { FaChevronDown } from '@react-icons/all-files/fa/FaChevronDown'
 
 import * as S from './styles'
 
-export default function About() {
+export default function About({ about }) {
   return (
     <S.About>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>{about.resume}</p>
       <Button>
         Ver projetos <FaChevronDown />
       </Button>

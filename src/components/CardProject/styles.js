@@ -4,7 +4,7 @@ export const CardProject = styled.article`
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  height: 46rem;
+  height: 30rem;
   transition: all 0.3s linear;
 
   @media (min-width: 1110px) {
