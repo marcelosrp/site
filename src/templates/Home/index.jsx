@@ -33,14 +33,12 @@ export default function HomeTemplate({ projects }) {
       <S.WrapperProjects>
         {projects.allProjects.map((project) => (
           <S.CardProject key={project.id}>
-            <div className="wrapper-image">
-              <Image
-                src={project.thumb.url}
-                alt={project.title}
-                layout="fill"
-                quality="80"
-              />
-            </div>
+            <Image
+              src={project.thumb.url}
+              alt={project.title}
+              layout="fill"
+              quality="80"
+            />
           </S.CardProject>
         ))}
       </S.WrapperProjects>
