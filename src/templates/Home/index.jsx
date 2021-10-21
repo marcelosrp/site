@@ -8,22 +8,15 @@ export default function HomeTemplate({ projects, about }) {
   return (
     <>
       <NextSeo
-        title="NextJS - Boilerplate"
-        description="A simple NextJS Boilerplate to start an project"
-        canonical="https://my-trips-soares.vercel.app/"
+        title="Marcelo Soares - Front-End"
+        description="Meu nome é Marcelo Soares e sou programador front-end desde 2013 utilizando as principais tecnologias do mercado. Já atendi clientes como Walmart.com, Asics, Livelo, Carrefour, Microsoft e etc."
+        canonical="https://marcelo-soares.vercel.app/"
         openGraph={{
-          url: 'https://my-trips-soares.vercel.app/',
-          title: 'NextJS - Boilerplate',
-          description: 'A simple NextJS Boilerplate to start an project',
-          images: [
-            {
-              url: '',
-              width: 1280,
-              height: 720,
-              alt: 'NextJS - Boilerplate'
-            }
-          ],
-          site_name: 'NextJS - Boilerplate'
+          url: 'https://marcelo-soares.vercel.app/',
+          title: 'Marcelo Soares - Front-End',
+          description:
+            'Meu nome é Marcelo Soares e sou programador front-end desde 2013 utilizando as principais tecnologias do mercado. Já atendi clientes como Walmart.com, Asics, Livelo, Carrefour, Microsoft e etc.',
+          site_name: 'Marcelo Soares - Front-End'
         }}
       />
 
