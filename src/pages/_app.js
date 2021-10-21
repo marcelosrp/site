@@ -1,7 +1,7 @@
 import { DefaultSeo } from 'next-seo'
 import { SEO } from '../../next-seo.config'
 import NextNprogress from 'nextjs-progressbar'
-
+import Layout from '@components/Layout'
 import GlobalStyles from '@common/styles/global'
 
 function MyApp({ Component, pageProps }) {
@@ -15,7 +15,9 @@ function MyApp({ Component, pageProps }) {
         height={3}
       />
       <GlobalStyles />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }
