@@ -3,8 +3,9 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
 
   :root {
-    --background: #000;
+    --background: #060101;
     --white: #eee;
+    --purple: #700B97;
     --container: 100rem;
     --small: 1.5rem;
     --medium: 3rem;
