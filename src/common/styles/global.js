@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #eee;
     --purple: #700B97;
     --container: 100rem;
+    --header: 10rem;
     --small: 1.5rem;
     --medium: 3rem;
     --large: 5rem;
@@ -25,6 +26,11 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    scroll-padding-top: calc(var(--header) - 4rem);
+
+    @media (min-width: 700px) {
+      scroll-padding-top: var(--header);
+    }
   }
 
   html, body, #__next {

@@ -5,7 +5,7 @@ export const Header = styled.header`
   background-color: rgba(6, 1, 1, 0.9);
   backdrop-filter: blur(20px) saturate(200%);
   display: flex;
-  height: 6rem;
+  height: calc(var(--header) - 4rem);
   justify-content: space-between;
   padding: 0 1.5rem;
   position: sticky;
@@ -15,7 +15,7 @@ export const Header = styled.header`
 
   @media (min-width: 700px) {
     padding: 0 10rem;
-    height: 10rem;
+    height: var(--header);
   }
 `
 

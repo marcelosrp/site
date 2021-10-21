@@ -38,7 +38,7 @@ export const CardProject = styled.article`
   }
 
   &:hover {
-    transform: translateY(-10px);
+    transform: scale(0.98);
   }
 
   img {

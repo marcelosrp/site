@@ -1,10 +1,18 @@
+import { useRef } from 'react'
 import { NextSeo } from 'next-seo'
 import About from '@components/About'
 import CardProject from '@components/CardProject'
+import { scrollToElement } from '../../utils'
 
 import * as S from './styles'
 
 export default function HomeTemplate({ projects, about }) {
+  const projectsWrapper = useRef()
+
+  function handleAboutClick() {
+    scrollToElement(projectsWrapper.current)
+  }
+
   return (
     <>
       <NextSeo
@@ -20,9 +28,9 @@ export default function HomeTemplate({ projects, about }) {
         }}
       />
 
-      <About about={about} />
+      <About about={about} handleAboutClick={handleAboutClick} />
 
-      <S.WrapperProjects>
+      <S.WrapperProjects ref={projectsWrapper}>
         {projects.allProjects.map((project) => (
           <CardProject key={project.id} project={project} />
         ))}
