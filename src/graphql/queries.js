@@ -2,7 +2,7 @@ import { gql } from 'graphql-request'
 
 export const GET_PROJECTS = gql`
   query getProjects($limit: IntType) {
-    allProjects(first: $limit) {
+    allProjects(first: $limit, orderBy: _createdAt_ASC) {
       id
       title
       url
