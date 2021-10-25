@@ -1,9 +1,12 @@
 import { NextSeo } from 'next-seo'
 import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
+import Gallery from '@components/Gallery'
+
 import * as S from './styles'
 
 export default function WorkTemplate({ work }) {
-  const { title, url, description, scope, technology } = work.allProjects[0]
+  const { title, url, description, scope, technology, gallery } =
+    work.allProjects[0]
 
   return (
     <>
@@ -38,6 +41,18 @@ export default function WorkTemplate({ work }) {
           </S.Tecs>
         </S.AboutProjectWrapper>
       </S.Container>
+
+      {gallery.length > 0 && (
+        <S.Gallery>
+          {gallery.map((photo, index) => {
+            return <Gallery key={index} photo={photo} />
+          })}
+          <S.URL href={url} target="_blank" rel="noreferrer">
+            Ver site
+            <FaArrowRight />
+          </S.URL>
+        </S.Gallery>
+      )}
     </>
   )
 }

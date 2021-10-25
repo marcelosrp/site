@@ -15,12 +15,12 @@ export const AboutProjectWrapper = styled.div`
   color: var(--white);
   display: flex;
   justify-content: space-between;
-  padding: 6.5rem 0;
+  padding-top: 6.5rem;
   width: 100%;
 `
 
 export const About = styled.article`
-  width: 70%;
+  flex: 1 1;
 
   p {
     font-size: 2rem;
@@ -66,5 +66,24 @@ export const URL = styled.a`
 
   &:active {
     transform: scale(0.9);
+  }
+`
+
+export const Gallery = styled.section`
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-bottom: 4rem;
+  position: relative;
+  width: 100%;
+
+  & > div {
+    position: relative;
+    margin: 6rem 0;
+    min-height: 563px;
+    width: 100%;
+  }
+
+  & > a {
+    margin: 0 auto;
   }
 `
