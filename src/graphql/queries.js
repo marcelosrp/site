@@ -30,6 +30,10 @@ export const GET_WORK_BY_SLUG = gql`
       description
       scope
       technology
+      gallery {
+        alt
+        url
+      }
     }
   }
 `

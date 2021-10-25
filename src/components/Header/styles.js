@@ -23,4 +23,9 @@ export const Logo = styled.h1`
   font-size: 2.5rem;
   font-weight: var(--normal);
   letter-spacing: 1px;
+
+  & > a {
+    color: var(--white);
+    text-decoration: none;
+  }
 `
