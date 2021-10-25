@@ -11,7 +11,7 @@ export default function Gallery({ photo }) {
         objectFit="contain"
         quality="80"
         placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8Wg8AAk8BZuQcWLwAAAAASUVORK5CYII="
+        blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
       />
     </div>
   )
