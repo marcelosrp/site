@@ -1,6 +1,6 @@
-import HomeTemplate from '@templates/Home'
 import { request } from '@graphql/request'
 import { GET_PROJECTS, GET_RESUME } from '@graphql/queries'
+import HomeTemplate from '@templates/Home'
 
 export default function Home({ projects, about }) {
   return <HomeTemplate projects={projects} about={about} />
