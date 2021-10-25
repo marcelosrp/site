@@ -14,7 +14,7 @@ export const About = styled.section`
     line-height: 1.5;
 
     @media (min-width: 700px) {
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
   }
 

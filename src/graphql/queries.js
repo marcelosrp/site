@@ -6,7 +6,10 @@ export const GET_PROJECTS = gql`
       id
       title
       url
-      datePublish
+      description
+      scope
+      technology
+      slug
       thumb {
         url
       }

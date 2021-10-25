@@ -8,7 +8,7 @@ export const Button = styled.button`
   cursor: pointer;
   display: flex;
   font-size: 1.6rem;
-  font-weight: var(--normal);
+  font-weight: var(--extraBold);
   gap: 10px;
   justify-content: center;
   padding: 14px 20px 12px;
