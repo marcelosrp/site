@@ -77,9 +77,11 @@ export const Gallery = styled.section`
   width: 100%;
 
   & > div {
-    position: relative;
+    border-radius: 16px;
     margin: 6rem 0;
     min-height: 563px;
+    overflow: hidden;
+    position: relative;
     width: 100%;
   }
 
