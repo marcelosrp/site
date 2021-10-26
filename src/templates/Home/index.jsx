@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { NextSeo } from 'next-seo'
 import About from '@components/About'
-import CardProject from '@components/CardProject'
 import { scrollToElement } from '../../utils'
+import CardProject from '@components/CardProject'
 
 import * as S from './styles'
 
@@ -30,7 +30,13 @@ export default function HomeTemplate({ projects, about }) {
 
       <About about={about} handleAboutClick={handleAboutClick} />
 
-      <S.WrapperProjects ref={projectsWrapper}>
+      <S.WrapperProjects
+        ref={projectsWrapper}
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
+      >
         {projects.allProjects.map((project) => (
           <CardProject key={project.id} project={project} />
         ))}

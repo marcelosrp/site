@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "framer-motion": "^4.1.17",
     "graphql": "^15.6.1",
     "graphql-request": "^3.6.1",
     "next": "11.1.2",

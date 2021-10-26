@@ -2,10 +2,12 @@ import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import { SEO } from '../../next-seo.config'
 import NextNprogress from 'nextjs-progressbar'
+//import { motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import Layout from '@components/Layout'
 import GlobalStyles from '@common/styles/global'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Head>
@@ -21,7 +23,9 @@ function MyApp({ Component, pageProps }) {
       />
       <GlobalStyles />
       <Layout>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </Layout>
     </>
   )

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const WrapperProjects = styled.section`
+export const WrapperProjects = styled(motion.section)`
   display: grid;
   grid-auto-rows: 1fr;
   grid-gap: 30px;

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const CardProject = styled.article`
+export const CardProject = styled(motion.article)`
   border-radius: 16px;
   overflow: hidden;
   position: relative;

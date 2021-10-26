@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const Title = styled.h1`
   font-size: 3.5rem;
@@ -11,7 +12,7 @@ export const Container = styled.section`
   width: 100%;
 `
 
-export const AboutProjectWrapper = styled.div`
+export const AboutProjectWrapper = styled(motion.div)`
   color: var(--white);
   display: flex;
   justify-content: space-between;
@@ -69,7 +70,7 @@ export const URL = styled.a`
   }
 `
 
-export const Gallery = styled.section`
+export const Gallery = styled(motion.section)`
   max-width: var(--container);
   margin: 0 auto;
   padding-bottom: 4rem;
