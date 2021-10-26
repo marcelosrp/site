@@ -27,6 +27,10 @@ export const Button = styled.button`
     position: fixed;
     padding: 0;
     width: 4.5rem;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   &:hover {

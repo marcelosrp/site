@@ -42,12 +42,20 @@ export const Title = styled(motion.h1)`
     position: absolute;
     width: 8rem;
   }
+
+  @media (max-width: 767px) {
+    font-size: 2.8rem;
+  }
 `
 
 export const Container = styled.section`
   margin: 8rem auto;
   max-width: var(--container);
   width: 100%;
+
+  @media (max-width: 767px) {
+    margin: 3.5rem 0;
+  }
 `
 
 export const AboutProjectWrapper = styled(motion.div)`
@@ -56,10 +64,18 @@ export const AboutProjectWrapper = styled(motion.div)`
   justify-content: space-between;
   padding-top: 5rem;
   width: 100%;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `
 
 export const About = styled.article`
   width: 65%;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 
   p {
     font-size: 1.7rem;
@@ -122,6 +138,11 @@ export const Gallery = styled(motion.section)`
     overflow: hidden;
     position: relative;
     width: 100%;
+
+    @media (max-width: 767px) {
+      margin: 3rem 0;
+      min-height: 185px;
+    }
   }
 
   & > a {

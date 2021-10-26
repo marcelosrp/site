@@ -10,12 +10,13 @@ export const About = styled(motion.section)`
   }
 
   p {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: var(--bold);
-    line-height: 1.5;
+    line-height: 1.8;
 
     @media (min-width: 700px) {
       font-size: 2.8rem;
+      line-height: 1.5;
     }
   }
 
