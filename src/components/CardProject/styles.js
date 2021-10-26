@@ -6,7 +6,6 @@ export const CardProject = styled(motion.article)`
   overflow: hidden;
   position: relative;
   height: 30rem;
-  transition: all 0.3s linear;
 
   @media (min-width: 1110px) {
     height: 30rem;
@@ -36,10 +35,6 @@ export const CardProject = styled(motion.article)`
     @media (min-width: 1000px) {
       grid-column-start: span 2;
     }
-  }
-
-  &:hover {
-    transform: scale(0.98);
   }
 
   a {

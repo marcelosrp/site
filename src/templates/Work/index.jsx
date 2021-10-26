@@ -70,7 +70,7 @@ export default function WorkTemplate({ work }) {
 
       <motion.div initial="exit" animate="enter" exit="exit">
         <S.Container>
-          <S.Title>{title}</S.Title>
+          <S.Title variants={textVariants}>{title}</S.Title>
           <S.AboutProjectWrapper variants={textVariants}>
             <S.About>
               <p>{description}</p>

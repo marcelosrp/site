@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import * as S from './styles'
 
-const postVariants = {
+const cardVariants = {
   initial: { scale: 0.96, y: 30, opacity: 0 },
   enter: {
     scale: 1,
@@ -22,7 +22,7 @@ const postVariants = {
 
 export default function CardProject({ project }) {
   return (
-    <S.CardProject variants={postVariants}>
+    <S.CardProject variants={cardVariants} whileHover={{ translateY: -10 }}>
       <Link href={`/work/${encodeURIComponent(project.slug)}`}>
         <a>
           <Image

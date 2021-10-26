@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   font-size: 3.5rem;
   font-weight: var(--bold);
 `
@@ -21,7 +21,7 @@ export const AboutProjectWrapper = styled(motion.div)`
 `
 
 export const About = styled.article`
-  flex: 1 1;
+  width: 70%;
 
   p {
     font-size: 2rem;
