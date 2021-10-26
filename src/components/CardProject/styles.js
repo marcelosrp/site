@@ -41,6 +41,13 @@ export const CardProject = styled.article`
     transform: scale(0.98);
   }
 
+  a {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
   img {
     object-fit: cover;
 
