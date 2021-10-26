@@ -4,6 +4,18 @@ import { motion } from 'framer-motion'
 export const Title = styled(motion.h1)`
   font-size: 3.5rem;
   font-weight: var(--bold);
+  padding-bottom: 1rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: var(--white);
+    bottom: 0;
+    display: block;
+    height: 0.3rem;
+    position: absolute;
+    width: 8rem;
+  }
 `
 
 export const Container = styled.section`
@@ -16,15 +28,15 @@ export const AboutProjectWrapper = styled(motion.div)`
   color: var(--white);
   display: flex;
   justify-content: space-between;
-  padding-top: 6.5rem;
+  padding-top: 5rem;
   width: 100%;
 `
 
 export const About = styled.article`
-  width: 70%;
+  width: 65%;
 
   p {
-    font-size: 2rem;
+    font-size: 1.7rem;
     line-height: 1.8;
   }
 `

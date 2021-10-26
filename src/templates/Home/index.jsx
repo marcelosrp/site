@@ -1,22 +1,15 @@
 import { useRef } from 'react'
 import { NextSeo } from 'next-seo'
-import { motion } from 'framer-motion'
 import { scrollToElement } from '../../utils'
 import About from '@components/About'
 import CardProject from '@components/CardProject'
 
 import * as S from './styles'
 
-let easing = [0.175, 0.85, 0.42, 0.96]
-
-const textVariants2 = {
-  initial: { scale: 0.96, y: 30, opacity: 0 }
-}
-
 export default function HomeTemplate({ projects, about }) {
   const projectsWrapper = useRef()
 
-  function handleAboutClick() {
+  function handleClick() {
     scrollToElement(projectsWrapper.current)
   }
 
@@ -35,7 +28,7 @@ export default function HomeTemplate({ projects, about }) {
         }}
       />
 
-      <About about={about} handleAboutClick={handleAboutClick} />
+      <About about={about} handleClick={handleClick} />
 
       <S.WrapperProjects
         ref={projectsWrapper}

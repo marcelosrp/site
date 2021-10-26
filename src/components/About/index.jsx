@@ -13,11 +13,11 @@ const textVariants = {
   }
 }
 
-export default function About({ about, handleAboutClick }) {
+export default function About({ about, handleClick }) {
   return (
     <S.About initial="exit" animate="enter" exit="exit" variants={textVariants}>
       <p>{about.resume}</p>
-      <Button handleAboutClick={handleAboutClick}>
+      <Button handleClick={handleClick}>
         Ver projetos <FaChevronDown />
       </Button>
     </S.About>

@@ -1,8 +1,11 @@
+import { useRef } from 'react'
 import { NextSeo } from 'next-seo'
 import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
+import { FaArrowUp } from '@react-icons/all-files/fa/FaArrowUp'
 import { motion } from 'framer-motion'
-import Link from 'next/dist/client/link'
+import { scrollToElement } from '../../utils'
 import Gallery from '@components/Gallery'
+import Button from '@components/Button'
 
 import * as S from './styles'
 
@@ -53,6 +56,12 @@ export default function WorkTemplate({ work }) {
   const { title, url, description, scope, technology, gallery } =
     work.allProjects[0]
 
+  const container = useRef()
+
+  function scrollToTop() {
+    scrollToElement(container.current)
+  }
+
   return (
     <>
       <NextSeo
@@ -69,7 +78,7 @@ export default function WorkTemplate({ work }) {
       />
 
       <motion.div initial="exit" animate="enter" exit="exit">
-        <S.Container>
+        <S.Container ref={container}>
           <S.Title variants={textVariants}>{title}</S.Title>
           <S.AboutProjectWrapper variants={textVariants}>
             <S.About>
@@ -101,9 +110,13 @@ export default function WorkTemplate({ work }) {
         )}
 
         <motion.div variants={backVariants}>
-          <Link href="/">
-            <a>Voltar</a>
-          </Link>
+          <Button
+            handleClick={scrollToTop}
+            className="back-to-top"
+            title="Voltar ao topo"
+          >
+            <FaArrowUp />
+          </Button>
         </motion.div>
       </motion.div>
     </>
