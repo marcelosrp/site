@@ -1,6 +1,8 @@
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
+import Link from 'next/dist/client/link'
 import { NextSeo } from 'next-seo'
-import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
+import { FaLink } from '@react-icons/all-files/fa/FaLink'
+import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft'
 import { FaArrowUp } from '@react-icons/all-files/fa/FaArrowUp'
 import { motion } from 'framer-motion'
 import { scrollToElement } from '../../utils'
@@ -32,34 +34,32 @@ const textVariants = {
   }
 }
 
-const backVariants = {
-  exit: {
-    x: 100,
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-      ease: easing
-    }
-  },
-  enter: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      duration: 0.5,
-      ease: easing
-    }
-  }
-}
-
 export default function WorkTemplate({ work }) {
   const { title, url, description, scope, technology, gallery } =
     work.allProjects[0]
 
   const container = useRef()
 
+  const [showButtonToTop, setShowButtonToTop] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleButtonToTop)
+
+    return () => {
+      window.removeEventListener('scroll', toggleButtonToTop)
+    }
+  }, [])
+
   function scrollToTop() {
     scrollToElement(container.current)
+  }
+
+  function toggleButtonToTop() {
+    if (window.scrollY >= 250) {
+      return setShowButtonToTop(true)
+    }
+
+    setShowButtonToTop(false)
   }
 
   return (
@@ -79,13 +79,21 @@ export default function WorkTemplate({ work }) {
 
       <motion.div initial="exit" animate="enter" exit="exit">
         <S.Container ref={container}>
-          <S.Title variants={textVariants}>{title}</S.Title>
+          <S.Header variants={textVariants}>
+            <S.Title>{title}</S.Title>
+            <Link href="/">
+              <a title="Voltar para a home">
+                <FaArrowLeft />
+                Voltar
+              </a>
+            </Link>
+          </S.Header>
           <S.AboutProjectWrapper variants={textVariants}>
             <S.About>
               <p>{description}</p>
               <S.URL href={url} target="_blank" rel="noreferrer">
                 Ver site
-                <FaArrowRight />
+                <FaLink />
               </S.URL>
             </S.About>
             <S.Tecs>
@@ -104,12 +112,12 @@ export default function WorkTemplate({ work }) {
             })}
             <S.URL href={url} target="_blank" rel="noreferrer">
               Ver site
-              <FaArrowRight />
+              <FaLink />
             </S.URL>
           </S.Gallery>
         )}
 
-        <motion.div variants={backVariants}>
+        {showButtonToTop && (
           <Button
             handleClick={scrollToTop}
             className="back-to-top"
@@ -117,7 +125,7 @@ export default function WorkTemplate({ work }) {
           >
             <FaArrowUp />
           </Button>
-        </motion.div>
+        )}
       </motion.div>
     </>
   )

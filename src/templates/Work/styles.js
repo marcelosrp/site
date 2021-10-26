@@ -1,6 +1,32 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
+export const Header = styled(motion.section)`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  a {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    svg {
+      font-size: 1.8rem;
+    }
+
+    &:hover {
+      color: var(--purple);
+    }
+  }
+`
+
 export const Title = styled(motion.h1)`
   font-size: 3.5rem;
   font-weight: var(--bold);
