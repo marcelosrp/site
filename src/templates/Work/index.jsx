@@ -65,7 +65,7 @@ export default function WorkTemplate({ work }) {
   return (
     <>
       <NextSeo
-        title={`${title} | Marcelo Soares - Front-End`}
+        title={title}
         description="Meu nome é Marcelo Soares e sou programador front-end desde 2013 utilizando as principais tecnologias do mercado. Já atendi clientes como Walmart.com, Asics, Livelo, Carrefour, Microsoft e etc."
         canonical="https://marcelo-soares.vercel.app/"
         openGraph={{

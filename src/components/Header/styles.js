@@ -20,12 +20,17 @@ export const Header = styled.header`
 `
 
 export const Logo = styled.h1`
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: var(--normal);
   letter-spacing: 1px;
 
   & > a {
     color: var(--white);
     text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--purple);
+    }
   }
 `
