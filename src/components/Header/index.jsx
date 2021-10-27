@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { FaSkull } from '@react-icons/all-files/fa/FaSkull'
 import Social from '@components/Social'
+import { FaCode } from '@react-icons/all-files/fa/FaCode'
 
 import * as S from './styles'
 
@@ -10,7 +10,8 @@ export default function Header() {
       <S.Logo>
         <Link href="/">
           <a>
-            <FaSkull />
+            Marcelo <strong>Soares</strong>
+            <FaCode />
           </a>
         </Link>
       </S.Logo>

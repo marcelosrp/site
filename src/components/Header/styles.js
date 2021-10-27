@@ -20,12 +20,18 @@ export const Header = styled.header`
 `
 
 export const Logo = styled.h1`
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: var(--normal);
-  letter-spacing: 1px;
+
+  @media (max-width: 767px) {
+    font-size: 1.8rem;
+  }
 
   & > a {
+    align-items: center;
     color: var(--white);
+    display: flex;
+    gap: 1rem;
     text-decoration: none;
     transition: color 0.3s ease;
 
