@@ -1,7 +1,17 @@
 {
-  "name": "nextjs-boilerplate",
-  "version": "0.1.0",
+  "name": "marcelo-soares-frontend",
+  "version": "1.0.0",
   "private": true,
+  "description": "Meu nome é Marcelo Soares e sou programador front-end desde 2013 utilizando as principais tecnologias do mercado. Já atendi clientes como Walmart.com, Asics, Livelo, Carrefour, Microsoft e etc.",
+  "author": {
+    "name": "Marcelo Soares",
+    "email": "soares.srp@gmail.com",
+    "url": "https://marcelo-soares.vercel.app/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcelosrp/site"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
