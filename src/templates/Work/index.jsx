@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import Link from 'next/dist/client/link'
 import { NextSeo } from 'next-seo'
+import PropTypes from 'prop-types'
 import { FaLink } from '@react-icons/all-files/fa/FaLink'
 import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft'
 import { FaArrowUp } from '@react-icons/all-files/fa/FaArrowUp'
@@ -129,4 +130,8 @@ export default function WorkTemplate({ work }) {
       </motion.div>
     </>
   )
+}
+
+WorkTemplate.propTypes = {
+  work: PropTypes.object.isRequired
 }

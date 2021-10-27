@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Button from '@components/Button'
 import { FaChevronDown } from '@react-icons/all-files/fa/FaChevronDown'
 
@@ -13,7 +14,7 @@ const textVariants = {
   }
 }
 
-export default function About({ about, handleClick }) {
+export default function About({ about, handleClick = undefined }) {
   return (
     <S.About initial="exit" animate="enter" exit="exit" variants={textVariants}>
       <p>{about.resume}</p>
@@ -22,4 +23,9 @@ export default function About({ about, handleClick }) {
       </Button>
     </S.About>
   )
+}
+
+About.propTypes = {
+  about: PropTypes.object.isRequired,
+  handleClick: PropTypes.func
 }

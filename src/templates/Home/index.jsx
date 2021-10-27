@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { NextSeo } from 'next-seo'
+import PropTypes from 'prop-types'
 import { scrollToElement } from '../../utils'
 import About from '@components/About'
 import CardProject from '@components/CardProject'
@@ -43,4 +44,9 @@ export default function HomeTemplate({ projects, about }) {
       </S.WrapperProjects>
     </>
   )
+}
+
+HomeTemplate.propTypes = {
+  projects: PropTypes.object.isRequired,
+  about: PropTypes.object.isRequired
 }
